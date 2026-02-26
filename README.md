@@ -19,7 +19,7 @@ sudo ./setup-kraken.sh --system
 ```
 Place `kraken_desktop` (downloaded from [kraken.com/desktop](https://www.kraken.com/desktop))
 and optionally a `kraken.png` icon in the same directory before running.
-
+---
 ### Ubuntu/Debian
 ```bash
 # Install required package
