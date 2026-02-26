@@ -161,7 +161,31 @@ ls -la /usr/share/applications/kraken* ~/.local/share/applications/kraken*
 # Check desktop file validation
 desktop-file-validate ~/.local/share/applications/kraken.desktop
 ```
+### 5. App Not Appearing in Application Launcher
 
+After installation, the app may not immediately appear in GNOME/KDE/XFCE launchers.
+```bash
+# Force refresh the launcher (GNOME)
+update-desktop-database ~/.local/share/applications
+killall -q gnome-shell || true
+
+# KDE
+kbuildsycoca5 --noincremental
+
+# Or simply log out and back in
+```
+
+Also verify the desktop file has no validation errors:
+```bash
+desktop-file-validate ~/.local/share/applications/kraken.desktop
+```
+### 6. `kraken_desktop` Command Not Found After User Install
+
+On some distributions `~/.local/bin` is not in `$PATH` by default. Add it:
+```bash
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
 ## Still Having Issues?
 
 1. Verify Kraken Desktop is properly installed
