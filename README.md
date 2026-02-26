@@ -7,6 +7,19 @@ A guide for properly setting up Kraken Desktop's URL handler (`kraken://`) on Li
 1. Download Kraken Desktop from [Official Website](https://www.kraken.com/desktop)
 2. Run installation commands for your distribution:
 
+## Automated Setup (Recommended)
+Clone this repo and run the setup script:
+```bash
+# User install (no sudo needed)
+chmod +x setup-kraken.sh
+./setup-kraken.sh
+
+# System-wide install
+sudo ./setup-kraken.sh --system
+```
+Place `kraken_desktop` (downloaded from [kraken.com/desktop](https://www.kraken.com/desktop))
+and optionally a `kraken.png` icon in the same directory before running.
+
 ### Ubuntu/Debian
 ```bash
 # Install required package
